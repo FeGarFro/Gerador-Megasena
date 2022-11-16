@@ -51,7 +51,7 @@ function play() {
         gameArray = formatNumbers(gameArray)
         globalGame = gameArray;
         showResult(gameArray, gameResultArea)       
-    }
+    } 
 }
 
 function generateNumbers(){
