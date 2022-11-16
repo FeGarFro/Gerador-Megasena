@@ -1,3 +1,5 @@
+var globalGame;
+
 function changeGameType(){
     var gameTypeButton = document.getElementById('typeOfGame')
     if (gameTypeButton.value == '6') {
@@ -45,8 +47,9 @@ function play() {
 
     for (let main = 0; main < games.length; main++) {
         var gameArray = games[main]
-        orderArray(gameArray)
-        formatNumbers(gameArray)
+        gameArray = orderArray(gameArray)
+        gameArray = formatNumbers(gameArray)
+        globalGame = gameArray;
         showResult(gameArray, gameResultArea)       
     }
 }
@@ -77,6 +80,7 @@ function orderArray(gameArray){
             }  
         }
     }
+    return gameArray;
 }
 
 function formatNumbers(gameArray){
@@ -84,6 +88,7 @@ function formatNumbers(gameArray){
         gameArray[index] = gameArray[index].toString()
         if (gameArray[index].length < 2) gameArray[index]= '0'+ gameArray[index]
     }
+    return gameArray;
 }
 
 function showResult(gameArray, gameResultArea){
