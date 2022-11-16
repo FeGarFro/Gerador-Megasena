@@ -49,9 +49,9 @@ function play() {
         var gameArray = games[main]
         gameArray = orderArray(gameArray)
         gameArray = formatNumbers(gameArray)
-        globalGame = gameArray;
         showResult(gameArray, gameResultArea)       
     } 
+        globalGame = gameArray
 }
 
 function generateNumbers(){
