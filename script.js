@@ -1,4 +1,4 @@
-var globalGame;
+var globalGame = [];
 
 function changeGameType(){
     var gameTypeButton = document.getElementById('typeOfGame')
@@ -49,9 +49,9 @@ function play() {
         var gameArray = games[main]
         gameArray = orderArray(gameArray)
         gameArray = formatNumbers(gameArray)
+        globalGame.push(gameArray);
         showResult(gameArray, gameResultArea)       
     } 
-        globalGame = gameArray
 }
 
 function generateNumbers(){
