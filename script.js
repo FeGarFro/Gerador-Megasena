@@ -1,4 +1,6 @@
 var globalGame = [];
+var nGames;
+var nNumber;
 
 function changeGameType(){
     var gameTypeButton = document.getElementById('typeOfGame')
@@ -14,22 +16,22 @@ function changeGameType(){
 function changeNumberOfGames(){
     var numberOfGamesButton = document.getElementById('numberOfGames')
 
-    switch (numberOfGames.value) {
+    switch (numberOfGamesButton.value) {
         case '1':
-            numberOfGames.value = '3'
-            numberOfGames.innerHTML = '3 Jogos'
+            numberOfGamesButton.value = '3'
+            numberOfGamesButton.innerHTML = '3 Jogos'
             break;
         case '3':
-            numberOfGames.value = '6'
-            numberOfGames.innerHTML = '6 Jogos'
+            numberOfGamesButton.value = '6'
+            numberOfGamesButton.innerHTML = '6 Jogos'
             break;
         // case '6':
-        //     numberOfGames.value = '9'
-        //     numberOfGames.innerHTML = '9 Jogos'
+        //     numberOfGamesButton.value = '9'
+        //     numberOfGamesButton.innerHTML = '9 Jogos'
         //     break;
         case '6':
-            numberOfGames.value = '1'
-            numberOfGames.innerHTML = '1 Jogo'
+            numberOfGamesButton.value = '1'
+            numberOfGamesButton.innerHTML = '1 Jogo'
             break;
     }
 }
